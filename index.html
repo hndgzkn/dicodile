@@ -93,15 +93,33 @@
     <div class="body col-md-12 content" role="main">
       
   <p><img alt="Build Status" src="https://github.com/tomMoral/dicodile/workflows/unittests/badge.svg" /> <a class="reference external" href="https://codecov.io/gh/tomMoral/dicodile"><img alt="codecov" src="https://codecov.io/gh/tomMoral/dicodile/branch/master/graph/badge.svg" /></a></p>
-<p>This package is still under development. If you have any trouble running this code, please contact <a class="reference external" href="mailto:thomas&#46;moreau&#46;2010&#37;&#52;&#48;gmail&#46;com">thomas<span>&#46;</span>moreau<span>&#46;</span>2010<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>This package is still under development. If you have any trouble running this code,
+please <a class="reference external" href="https://github.com/tomMoral/dicodile/issues">open an issue on GitHub</a>.</p>
 <div class="section" id="dicodile">
 <h1>DiCoDiLe<a class="headerlink" href="#dicodile" title="Permalink to this headline">¶</a></h1>
 <p>Package to run the experiments for the preprint paper <a class="reference external" href="https://arxiv.org/abs/1901.09235">Distributed Convolutional Dictionary Learning (DiCoDiLe): Pattern Discovery in Large Images and Signals</a>.</p>
-<div class="section" id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>All the tests were done with python3.6. This package depends on the python library <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>,
-<code class="docutils literal notranslate"><span class="pre">joblib</span></code>. The package can be installed with the following command run from the root of the package.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>All the tests should work with python &gt;=3.6. This package depends on the python
+library <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>, <code class="docutils literal notranslate"><span class="pre">joblib</span></code>. The
+package can be installed with the following command run from the root of the
+package.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install  -e .
+</pre></div>
+</div>
+<p>Or using the conda environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f dicodile_env.yml
+</pre></div>
+</div>
+<p>To build the doc use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install  -e .<span class="o">[</span>doc<span class="o">]</span>
+<span class="nb">cd</span> docs
+make html
+</pre></div>
+</div>
+<p>To run the tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install  -e .<span class="o">[</span>test<span class="o">]</span>
+pytest .
 </pre></div>
 </div>
 </div>
@@ -145,7 +163,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2021, Inria.<br/>
+        &copy; Copyright 2020-2021, Dicodile Developers. Last updated 2021-02-22 09:56 UTC.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
