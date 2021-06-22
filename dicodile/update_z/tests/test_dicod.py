@@ -15,7 +15,10 @@ N_WORKERS = 4
 
 @pytest.mark.filterwarnings("ignore", message="require different size")
 @pytest.mark.parametrize('signal_support, atom_support',
-                         [((800,), (50,)), ((100, 100), (10, 8))])
+                         [
+                             ((100, 100), (10, 8)),
+                             ((800,), (50,)),
+                         ])
 @pytest.mark.parametrize('n_workers', [2, 6, N_WORKERS])
 def test_stopping_criterion(n_workers, signal_support, atom_support):
     tol = 1
